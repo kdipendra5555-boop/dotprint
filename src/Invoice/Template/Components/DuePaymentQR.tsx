@@ -9,12 +9,12 @@ export default function DuePaymentQR({
   due,
   invoiceNo,
 }: DuePaymentQRProps) {
-  const UPI_ID = "spoorthikssagar-1@okhdfcbank";
-  const PAYEE_NAME = "Dot Print";
+  const UPI_ID = import.meta.env.VITE_UPI_ID;
+  const PAYEE_NAME = import.meta.env.VITE_PAYEE_NAME || "Dot Print";
 
   const dueAmount = Math.max(0, Number(due) || 0);
 
-  if (dueAmount <= 0) return null;
+  if (dueAmount <= 0 || !UPI_ID) return null;
 
   const upiUrl = new URL("upi://pay");
 
