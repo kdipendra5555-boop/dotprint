@@ -9,6 +9,7 @@ import CashMemo from "../Categories/CashMemo";
 import MyDesigns from "./MyDesigns";
 import ProductsPage from "../Categories/ProductsPage";
 import Footer from "../Components/Footer";
+import ToolsFooter from "../Components/ToolsFooter";
 
 
 function Home() {
@@ -31,6 +32,8 @@ function Home() {
       <MyDesigns/>
       {sections}
       <Footer/>
+      <ToolsFooter/>
+      
     </div>
   );
 }

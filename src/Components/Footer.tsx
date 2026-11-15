@@ -1,4 +1,3 @@
-
 import {
   Phone,
   Mail,
@@ -26,40 +25,41 @@ const services = [
 
 const Footer = () => {
   return (
-    <footer className="bg-[#111111] text-white">
+    <footer className="bg-[#FFFAF7] text-[#302525] border-t border-[#EADBD5]">
 
       {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-16 pb-12">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-16 pb-14">
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-10">
 
           {/* Brand */}
           <div>
-            <Link to="/" className="inline-flex items-center gap-3 mb-5">
 
-              <div className="w-11 h-11 rounded-xl bg-orange-500 flex items-center justify-center">
-                <Printer size={23} className="text-white" />
+            <Link to="/" className="inline-flex items-center gap-3 mb-6">
+
+              <div className="w-12 h-12 rounded-xl bg-[#861F2D] flex items-center justify-center shadow-sm">
+                <Printer size={24} className="text-white" />
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold tracking-tight">
-                  dot<span className="text-orange-500">print.</span>
+                <h2 className="text-2xl font-extrabold tracking-tight text-[#861F2D]">
+                  dotprint
                 </h2>
 
-                <p className="text-[10px] tracking-[2px] text-gray-400 uppercase">
+                {/* <p className="text-[10px] tracking-[2px] text-[#8A7772] uppercase font-medium">
                   By Shailendra Press
-                </p>
+                </p> */}
               </div>
 
             </Link>
 
-            <p className="text-gray-400 text-sm leading-7 max-w-xs">
-              Bringing your ideas to life with quality printing,
+            <p className="text-[#786B67] text-sm leading-7 max-w-xs">
+              Bringing your ideas to life with premium quality printing,
               creative designs and reliable printing solutions.
             </p>
 
             {/* Social Media */}
-            <div className="flex gap-3 mt-6">
+            <div className="flex gap-3 mt-7">
 
               {/* Instagram */}
               <a
@@ -67,7 +67,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-orange-500 hover:border-orange-500 transition-all"
+                className="w-10 h-10 rounded-full border border-[#EADBD5] text-[#861F2D] flex items-center justify-center hover:bg-[#861F2D] hover:text-white hover:border-[#861F2D] transition-all duration-300"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -79,12 +79,7 @@ const Footer = () => {
                 >
                   <rect x="3" y="3" width="18" height="18" rx="5" />
                   <circle cx="12" cy="12" r="4" />
-                  <circle
-                    cx="17.5"
-                    cy="6.5"
-                    r="1"
-                    fill="currentColor"
-                  />
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
                 </svg>
               </a>
 
@@ -94,7 +89,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-orange-500 hover:border-orange-500 transition-all"
+                className="w-10 h-10 rounded-full border border-[#EADBD5] text-[#861F2D] flex items-center justify-center hover:bg-[#861F2D] hover:text-white hover:border-[#861F2D] transition-all duration-300"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -111,112 +106,132 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold text-base mb-6">
+
+            <h3 className="text-[#302525] font-bold text-base mb-7">
               Quick Links
             </h3>
 
-            <ul className="space-y-4 text-sm text-gray-400">
+            <ul className="space-y-4 text-sm text-[#786B67]">
+
               {quickLinks.map((item) => (
                 <li key={item.name}>
                   <Link
                     to={item.href}
-                    className="hover:text-orange-500 transition-colors"
+                    className="hover:text-[#861F2D] hover:translate-x-1 inline-block transition-all duration-300"
                   >
                     {item.name}
                   </Link>
                 </li>
               ))}
+
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-semibold text-base mb-6">
+
+            <h3 className="text-[#302525] font-bold text-base mb-7">
               Our Services
             </h3>
 
-            <ul className="space-y-4 text-sm text-gray-400">
+            <ul className="space-y-4 text-sm text-[#786B67]">
+
               {services.map((item) => (
                 <li key={item}>
                   <Link
                     to="/products"
-                    className="hover:text-orange-500 transition-colors"
+                    className="hover:text-[#861F2D] hover:translate-x-1 inline-block transition-all duration-300"
                   >
                     {item}
                   </Link>
                 </li>
               ))}
+
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="text-white font-semibold text-base mb-6">
+
+            <h3 className="text-[#302525] font-bold text-base mb-7">
               Get in Touch
             </h3>
 
-            <div className="space-y-5 text-sm text-gray-400">
+            <div className="space-y-5 text-sm text-[#786B67]">
 
-              <div className="flex gap-3">
+              <div className="flex gap-3 items-start">
+
                 <MapPin
                   size={19}
-                  className="text-orange-500 shrink-0"
+                  className="text-[#861F2D] shrink-0 mt-0.5"
                 />
-                <p>Kanpur, Uttar Pradesh, India</p>
+
+                <p className="leading-6">
+                  Kanpur, Uttar Pradesh, India
+                </p>
+
               </div>
 
-              <div className="flex gap-3">
+              <div className="flex gap-3 items-start">
+
                 <Phone
                   size={18}
-                  className="text-orange-500 shrink-0"
+                  className="text-[#861F2D] shrink-0 mt-0.5"
                 />
+
                 <p>Contact us for enquiries</p>
+
               </div>
 
-              <div className="flex gap-3">
+              <div className="flex gap-3 items-start">
+
                 <Mail
                   size={19}
-                  className="text-orange-500 shrink-0"
+                  className="text-[#861F2D] shrink-0 mt-0.5"
                 />
+
                 <p>Get in touch with us</p>
+
               </div>
 
             </div>
 
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 mt-7 text-sm font-semibold text-orange-500 hover:text-orange-400 transition-colors"
+              className="inline-flex items-center gap-2 mt-7 text-sm font-bold text-[#861F2D] hover:gap-3 transition-all duration-300"
             >
               Get a Quote
-              <ArrowUpRight size={16} />
+              <ArrowUpRight size={17} />
             </Link>
+
           </div>
 
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-white/10">
+      <div className="border-t border-[#EADBD5] bg-[#F8F0EC]">
 
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-col sm:flex-row justify-between items-center gap-3">
 
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-[#897873] text-center">
             © {new Date().getFullYear()} Dot Print. All rights reserved.
           </p>
 
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-[#897873]">
             Made with{" "}
-            <span className="text-orange-500">♥</span>
+            <span className="text-[#861F2D]">♥</span>
             {" "}by{" "}
             <Link
               to="/invoicemydot"
-              className="text-white font-medium hover:text-orange-500 transition-colors"
+              className="text-[#861F2D] font-semibold hover:underline"
             >
               Dot Print
             </Link>
           </p>
 
         </div>
+
       </div>
 
     </footer>

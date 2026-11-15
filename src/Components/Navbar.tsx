@@ -167,9 +167,9 @@ const Navbar = () => {
   </div>
 
   {/* Tagline */}
-  <span className="text-[7px] sm:text-[8px] tracking-[px] font-semibold text-[#555] pl-8  mt- ">
+  {/* <span className="text-[7px] sm:text-[8px] tracking-[px] font-semibold text-[#555] pl-8  mt- ">
     By Shailendra Press
-  </span>
+  </span> */}
 </Link>
 
           {/* Actions */}
